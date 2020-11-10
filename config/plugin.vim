@@ -67,6 +67,14 @@ noremap <Leader>fb :LeaderfBuffer<cr>
 noremap <Leader>ft :LeaderfTag<cr>
 noremap <Leader>fm :LeaderfMru<cr>
 noremap <Leader>fl :LeaderfLine<cr>
+let g:Lf_GtagsAutoGenerate = 1
+" let g:Lf_Gtagslabel = 'native-pygments'
+noremap <leader>fr :<C-U><C-R>=printf("Leaderf! gtags -r %s --auto-jump", expand("<cword>"))<CR><CR>
+noremap <leader>fd :<C-U><C-R>=printf("Leaderf! gtags -d %s --auto-jump", expand("<cword>"))<CR><CR>
+noremap <leader>fo :<C-U><C-R>=printf("Leaderf! gtags --recall %s", "")<CR><CR>
+noremap <leader>fn :<C-U><C-R>=printf("Leaderf gtags --next %s", "")<CR><CR>
+noremap <leader>fp :<C-U><C-R>=printf("Leaderf gtags --previous %s", "")<CR><CR>
+noremap <leader>fa :<C-U><C-R>=printf("Leaderf gtags")<CR><CR>
 
 let g:Lf_StlSeparator = { 'left': '', 'right': '', 'font': '' }
 let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
